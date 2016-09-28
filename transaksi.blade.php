@@ -16,7 +16,7 @@
 			</div>
 		</div><!--/.row-->
 
- {{ Form::open(array('url' => 'foo/bar')) }}
+ {{Form::open(array('action' => 'InputTransaksiController@store')) }}
 
  {{Form::label('no_bukti', 'No Bukti') }}
 
@@ -30,12 +30,12 @@
 
  {{Form::text('nominal', '', array('class' => 'form-control'))}}
 
- {{Form::label('tipe', 'Tipe Transaksi') }}
+ {{Form::label('tipe_transaksi', 'Tipe') }}
 
- {{Form::text('tipe', '', array('class' => 'form-control'))}}
+ {{Form::text('tipe_transaksi', '', array('class' => 'form-control'))}}
 
- {{Form::submit('Submit', array('class' => 'btn btn-primary custom-btn')) }}
-
+ {{Form::submit('input_data_transaksi', array('class' => 'btn btn-primary custom-btn')) }}
+  
     
  {{ Form::close()}}
 
