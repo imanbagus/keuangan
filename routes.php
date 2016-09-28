@@ -54,7 +54,6 @@ Route::get('logout', 'UserController@logout');
 Route::get('register', 'UserController@register'); 
 Route::post('store', 'UserController@store');
 Route::post('store', 'InputTransaksiController@store');
-//Route::get('show', array('as' => 'show', 'uses' => 'DataController@show'));
 
 //sentry
 
