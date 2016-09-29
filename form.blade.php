@@ -12,38 +12,43 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Form Input Data</h1>
+				<h1 class="page-header">Input Form data Data</h1>
 			</div>
 		</div><!--/.row-->
 
- {{ Form::open(array('url' => 'foo/bar')) }}
+ {{ Form::open(array('action' => 'LaporanController@store','role'=>'form','files'=> true)) }}
 
- {{Form::label('no', 'No') }}
+ {{Form::label('nobukti', 'No Bukti') }}
 
- {{Form::text('no', '', array('class' => 'form-control'))}}
+ {{Form::text('nobukti', '', array('class' => 'form-control', 'required' => 'required'))}}
 
  {{Form::label('tanggal', 'Tanggal') }}
 
- {{Form::text('tanggal', '', array('class' => 'form-control'))}}
+  <input name="tanggal" class="form-control date-picker" id="tanggal" data-date-format="yyyy-mm-dd" type="text" required="required" >
 
  {{Form::label('keterangan', 'Keterangan') }}
 
- {{Form::textarea('keterangan', '', array('class' => 'form-control'))}}
+ {{Form::textarea('keterangan', '', array('class' => 'form-control' , 'required' => 'required'))}}
 
  {{Form::label('noperk', 'No Perkiraan') }}
 
- {{Form::text('noperk', '', array('class' => 'form-control'))}}
+ {{Form::text('noperk', '', array('class' => 'form-control' , 'required' => 'required'))}}
 
  {{Form::label('debet', 'Debet') }}
 
- {{Form::text('debet', '', array('class' => 'form-control'))}}
+ {{Form::text('debet', '', array('class' => 'form-control', 'required' => 'required'))}}
 
  {{Form::label('kredit', 'Kredit') }}
 
- {{Form::text('kredit', '', array('class' => 'form-control'))}}
+ {{Form::text('kredit', '', array('class' => 'form-control' , 'required' => 'required'))}}
 
  {{Form::submit('Submit', array('class' => 'btn btn-primary custom-btn')) }}
 
     
  {{ Form::close()}}
 
+
+
+
+
+@stop
