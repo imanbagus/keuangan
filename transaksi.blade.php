@@ -20,22 +20,22 @@
 
  {{Form::label('no_bukti', 'No Bukti') }}
 
- {{Form::text('no_bukti', '', array('class' => 'form-control'))}}
+ {{Form::text('no_bukti', '', array('class' => 'form-control' ,'required' => 'required'))}}
 
  {{Form::label('tanggal', 'Tanggal') }}
 
- {{Form::text('tanggal', '', array('class' => 'form-control'))}}
+ {{Form::text('tanggal', '', array('class' => 'form-control' , 'required' => 'required'))}}
 
  {{Form::label('nominal', 'Nominal') }}
 
- {{Form::text('nominal', '', array('class' => 'form-control'))}}
+ {{Form::text('nominal', '', array('class' => 'form-control' , 'required' => 'required'))}}
 
  {{Form::label('tipe_transaksi', 'Tipe') }}
 
- {{Form::text('tipe_transaksi', '', array('class' => 'form-control'))}}
+ {{Form::text('tipe_transaksi', '', array('class' => 'form-control' , 'required' => 'required'))}}
 
- {{Form::submit('input_data_transaksi', array('class' => 'btn btn-primary custom-btn')) }}
+ {{Form::submit('submit', array('class' => 'btn btn-primary custom-btn')) }}
   
     
- {{ Form::close()}}
-
+{{ Form::close()}}
+@stop
