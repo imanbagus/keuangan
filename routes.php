@@ -26,6 +26,11 @@ Route::get('input', function()
  return View::make('form');
 });
 
+Route::get('input_data_transaksi', function()
+{
+ return View::make('transaksi');
+});
+
 Route::get('laporan', function()
 {
  return View::make('laporan');
@@ -54,6 +59,10 @@ Route::get('logout', 'UserController@logout');
 Route::get('register', 'UserController@register'); 
 Route::post('store', 'UserController@store');
 Route::post('store', 'InputTransaksiController@store');
+Route::get('edit/{id}', array('as' => 'edit', 'uses' => 'InputTransaksiController@edit'));
+Route::put('edit/{id}', array('as' => 'update', 'uses' => 'InputTransaksiController@update'));
+Route::get('delete/{id}', array('as' => 'delete', 'uses' => 'InputTransaksiController@delete'));
+
 
 //sentry
 
