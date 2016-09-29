@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beon Accounting</title>
 
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/css/datepicker3.css" rel="stylesheet">
-<link href="../assets/css/styles.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/datepicker3.css" rel="stylesheet">
+<link href="/assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<link href="/assets/css/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/datepicker/datepicker3.css">
+<link rel="stylesheet" href="/assets/daterangepicker/daterangepicker-bs3.css">
 
 <!--Icons-->
-<script src="../assets/js/lumino.glyphs.js"></script>
+<script src="/assets/js/lumino.glyphs.js"></script>
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -19,7 +22,7 @@
 <![endif]-->
 
 </head>
-
+<body>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
@@ -55,25 +58,41 @@
 		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="index"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-			<li><a href="widget"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Widgets</a></li>
-			<li><a href="chart"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Charts</a></li>
-			<li><a href="listdata"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> List Data</a></li>
+			<li><a href="/widget"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Widgets</a></li>
+			<li><a href="/chart"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Charts</a></li>
+			<li><a href="/laporan"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Laporan</a></li>
+			<li><a href="/ListTransaksi"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> List Transaksi</a></li>
 			
 
 
 			<li><a href="input"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Form Input Laporan</a></li>
-			<li><a href="form-transaksi"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Form Input Transaksi</a></li>
+			<li><a href="input_data_transaksi"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Form Input Transaksi</a></li>
          
 
 		</ul>
+</div>
+<div>
+	@yield('content');
+</div>
+	<script src="/assets/js/jquery-1.11.1.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
+	<script src="/assets/js/chart.min.js"></script>
+	<script src="/assets/js/chart-data.js"></script>
+	<script src="/assets/js/easypiechart.js"></script>
+	<script src="/assets/js/easypiechart-data.js"></script>
+	<script src="/assets/js/bootstrap-datepicker.js"></script>
+	<script src="/assets/js/bootstrap-datetimepicker.min.js"></script>
 
-	<script src="../assets/js/jquery-1.11.1.min.js"></script>
-	<script src="../assets/js/bootstrap.min.js"></script>
-	<script src="../assets/js/chart.min.js"></script>
-	<script src="../assets/js/chart-data.js"></script>
-	<script src="../assets/js/easypiechart.js"></script>
-	<script src="../assets/js/easypiechart-data.js"></script>
-	<script src="../assets/js/bootstrap-datepicker.js"></script>
+
+<script>
+	$(function() {
+		$( "#tanggal" ).datepicker({
+			changeMonth: true,
+			changeYear: true
+		});
+	});
+</script>
+
 	<script>
 		$('#calendar').datepicker({
 		});
@@ -92,4 +111,5 @@
 		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 		})
 	</script>	
+	</body>
 </html>
